@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Barlow', sans-serif;
+    line-height: 1.7;
+    color: var(--body);
+    scroll-behavior: smooth;
+}
+:root{
+    --brand: #ff4d29;
+    --dark: #092032;
+    --body: #516171;
+    --border: rgba(0,0,0,0.08);
+    --shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+}
+.fz-60{
+    font-size: 60px;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+    color: var(--dark);
+}
+.top-nav{
+    background-color: var(--brand);
+    padding-top: 10px;
+}
+#list-nav.open{
+    display: block !important;
+}
+.top-nav .social-icon a,
+.team-member .social-media a,
+#footer .social-icon-footer a{
+    color: #fff;
+    height: 28px;
+    width: 28px;
+    display: inline-flex;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+}
+.top-nav .social-icon a:hover,
+.team-member .social-media a:hover,
+#footer .social-icon-footer a:hover{
+    background-color: #fff;
+    color: var(--brand);
+}
+.navbar-brand{
+    font-weight: 700;
+    font-size: 28px;
+}
+.navbar-brand .dot{
+    color: var(--brand);
+}
+.navbar .navbar-nav .nav-link{
+    color: var(--dark);
+}
+.navbar .navbar-nav .nav-link:hover{
+    color: var(--brand);
+}
+.navbar .navbar-nav .nav-link.active {
+    color: var(--brand);
+}
+.btn-brand{
+    background-color: var(--brand);
+    border: var(--brand);
+    color: #fff;
+}
+.btn-brand:hover{
+    background-color: #d64022 !important;
+    border-color: #d64022 !important;
+    color: #fff !important;
+}
+.btn{
+    padding: 8px 26px;
+}
+.slide{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.slide-first{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/bg_banner2.jpg) top center / cover no-repeat;
+    
+}
+.slide-sencond{
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../img/bg_banner1.jpg) top center / cover no-repeat;
+}
+section{
+    padding: 80px 0;
+}
+#milion{
+    background: linear-gradient(rgba(255,77,41,0.85),rgba(255,77,41,0.85)),url(../img/bg_banner1.jpg) center / cover no-repeat;
+}
+.info-service h6{
+    color: var(--brand);
+    font-weight: 400;
+}
+.info-service p{
+    max-width: 500px;
+    margin: auto;
+}
+.service{
+    box-shadow: var(--shadow);
+    padding: 32px;
+}
+.card-body{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    
+}
+.card h6::before{
+    content: "";
+    height: 2px;
+    width: 30px;
+    display: inline-block;
+    background: var(--brand);
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.overlay{
+    width: 100%;
+    height: 220px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(255, 76, 41, 0) 0%, var(--dark) 100%);
+}
+.min-vh-auto{
+    min-height: auto;
+}
+
+.team-member .image{
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.team-member .social-media{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.4s ease;
+
+}
+.team-member:hover .social-media{
+    opacity: 1;
+}
+.team-member .overlay-team{
+    position: absolute;
+    background-color: rgba(255, 77, 41, 0.7);
+    width: 100%;
+    height: 100%;
+    top: -10%;
+    transition: all 0.4s ease;
+    left: 0;
+    opacity: 0;
+    z-index: 0;
+}
+.team-member:hover .overlay-team{
+    opacity: 1;
+    top: 0%;
+}
+#review{
+    background: linear-gradient(-90deg, rgba(8, 32, 50, 0.8), rgba(8, 32, 50, 0.8)), url(../img/bg_banner1.jpg), #082032;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#review img{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    margin: auto;
+    
+}
+#review h5{
+    color: #fff;
+    margin-top: 15px;
+}
+#review small{
+    color: var(--brand);
+}
+#review h3{
+    color: #fff;
+    text-align: center;
+    line-height: 1.7;
+    font-weight: 400;
+    margin-top: 25px;
+    font-size: 22px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+.text-danger{
+    color: var(--brand) !important;
+}
+.min-vh-60{
+    min-height: 60vh;
+}
+.carousel-indicators{
+    margin-bottom: -1.5rem;
+}
+.carousel-indicators button{
+    border-radius: 100%;
+    height: 10px !important;
+    width: 10px !important;
+}
+.item-blog{
+    position: relative;
+    box-shadow: var(--shadow);
+}
+.tag{
+    text-decoration: none;
+    background-color: var(--brand);
+    color: #fff;
+    border-radius: 13px;
+    padding: 0px 10px;
+    position: absolute;
+    left: 3%;
+    top: 4%;
+}
+.content{
+    padding: 8px 24px;
+}
+#blog small{
+    text-decoration: underline;
+    color: var(--brand);
+   
+}
+#footer{
+    background: linear-gradient(-90deg, rgba(8, 32, 50, 0.8), rgba(8, 32, 50, 0.8)), url(../img/bg_banner1.jpg), #082032;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#footer p{
+    color: #ADB3B9;
+}
